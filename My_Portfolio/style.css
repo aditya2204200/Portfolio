@@ -63,6 +63,7 @@ body{
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3 span{
     color: cyan;
@@ -80,6 +81,9 @@ body{
 }
 .home-content p{
     font-size: 20px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s
 }
 .home-sci a{
     display: inline-flex;
@@ -93,7 +97,11 @@ body{
     font-size: 20px;
     color: #0ef;
     text-decoration: none;
+    transition: .5s ease ;
     margin: 30px 15px 30px 0;
+     opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s * var);
 }
 .home-sci a:hover{
     background: #0ef;
@@ -117,7 +125,16 @@ body{
     0 0 100px cyan, 0 0 200px cyan;
 
 }
-
+@keyframes slideleft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
